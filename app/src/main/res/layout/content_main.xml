@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F0F0"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.administrator.getdepth.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <RelativeLayout
+        android:id="@+id/re_markdetail2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_centerVertical="true">
+
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/line_style"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/editText2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:text="距离（厘米）"
+                android:textSize="16dp"
+                android:gravity="center_horizontal"
+                android:autoText="false" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/editText"
+                android:text="信号"
+                android:textSize="16dp"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/editText2"
+                android:layout_alignBottom="@+id/editText2" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="批量删除"
+                android:id="@+id/textView"
+                android:layout_above="@+id/show_result"
+                android:layout_toEndOf="@+id/editText"
+                android:gravity="center_horizontal"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="20dp"
+                android:onClick="onMultchoose" />
+        </LinearLayout>
+
+        <ListView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_result"
+            android:layout_below="@+id/lin"
+            >
+        </ListView>
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_alignBottom="@+id/show_result"
+            >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:background="@android:color/holo_blue_dark"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:onClick="cancelBtn"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:background="@android:color/holo_red_light"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:onClick="deleteBtn"
+                />
+
+            <CheckBox
+                android:id="@+id/selectAll_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_style"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="距离"
+                android:textColor="#606060"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/edLength"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="点击选择距离"
+                android:textColor="#606060"
+                android:textColorHint="#C0C0C0"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="48dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/black_line" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="型号"
+                android:textColor="#606060"
+                android:textSize="17sp" />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="请选择"
+                android:textColor="#606060"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/line_style"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/ib_connect"
+                    android:src="@drawable/connect"
+                    android:scaleType="fitXY"
+                    android:background="#00000000"
+                    android:layout_marginLeft="23dp"
+                    android:onClick="onConnectButtonClicked" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageButton2"
+                    android:src="@drawable/read"
+                    android:scaleType="fitXY"
+                    android:background="#00000000"
+                    android:layout_marginLeft="16dp"
+                    android:onClick="onReadingButtonClicked" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageButton3"
+                    android:background="#00000000"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/add"
+                    android:layout_marginLeft="16dp"
+                    android:onClick="onAddButtonClicked" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageButton4"
+                    android:background="#00000000"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/save"
+                    android:layout_marginLeft="16dp"
+                    android:onClick="onSaveButtonClicked" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageButton5"
+                    android:layout_marginLeft="16dp"
+                    android:background="#00000000"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/upload"
+                    android:onClick="onUploadClicked" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="连接"
+                    android:id="@+id/tv_connect"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="读取"
+                    android:id="@+id/textView3"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="添加"
+                    android:id="@+id/textView4"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="保存"
+                    android:id="@+id/textView5"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="上传"
+                    android:id="@+id/textView6"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

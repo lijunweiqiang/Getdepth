@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/line_style"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+    <TextView android:layout_width="130dp"
+        android:layout_height="match_parent"
+
+        android:id="@+id/tv_length"
+        android:padding="6dip"
+        android:textColor="@color/abc_search_url_text_selected"
+        android:gravity="center"></TextView>
+    <TextView android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_RSS"
+        android:padding="6dip"
+        android:textColor="@color/abc_search_url_text_selected"
+        android:gravity="center|center_horizontal">
+    </TextView>
+
+    <CheckBox
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/checkBox"
+        android:checked="false"
+        android:button="@drawable/abc_btn_check_material"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:layout_marginLeft="40dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</LinearLayout>

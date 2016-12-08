@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1E0DE"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/login_div3"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/corner_bg"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:clickable="true">
+
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:text="服务器设置"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/IP"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/corner_bg"
+        android:gravity="top|center_vertical"
+        android:padding="10dp"
+        android:layout_weight="0.39">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="IP:"
+            android:id="@+id/textView"
+            android:textIsSelectable="false"
+            android:textSize="26dp"
+            android:textColor="@color/abc_input_method_navigation_guard"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/ip_first"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="@string/default_gw_hint"
+            android:selectAllOnFocus="false" />
+        <TextView
+            android:id="@+id/dot_1"
+            android:layout_toRightOf="@id/ip_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:layout_marginTop="25dp"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_alignBottom="@id/ip_first"
+            />
+        <EditText
+            android:id="@+id/ip_second"
+            android:layout_toRightOf="@id/dot_1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="@string/default_gw_hint"/>
+        <TextView
+            android:id="@+id/dot_2"
+            android:layout_toRightOf="@id/ip_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dot_tv"
+            android:layout_marginTop="25dp"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_alignBottom="@id/ip_first"
+            />
+        <EditText
+            android:id="@+id/ip_third"
+            android:layout_toRightOf="@id/dot_2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="@string/default_gw_hint"/>
+        <TextView
+            android:id="@+id/dot_3"
+            android:layout_toRightOf="@id/ip_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dot_tv"
+            android:layout_marginTop="25dp"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_alignBottom="@id/ip_first"
+            />
+        <EditText
+            android:id="@+id/ip_fourth"
+            android:layout_toRightOf="@id/dot_3"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="@string/default_gw_hint"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="端口号:"
+            android:id="@+id/textView5"
+            android:textIsSelectable="false"
+            android:textSize="26dp"
+            android:textColor="@color/abc_input_method_navigation_guard"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/ip_first" />
+
+        <EditText
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/Port"
+            android:hint="8080"
+            android:layout_below="@+id/ip_second"
+            android:layout_toEndOf="@+id/ip_second" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:id="@+id/button7"
+            android:onClick="onIPOKButtonClicked"
+            android:layout_alignTop="@+id/button8"
+             />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:id="@+id/button8"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/ip_fourth"
+            android:onClick="onIPCancleButtonClicked"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">“信号-深度”数据收集</string>
+    <string name="action_settings">Settings</string>
+    <string name="default_gw_hint">0</string>
+    <string name="dot_tv">.</string>
+</resources>
